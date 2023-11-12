@@ -1,9 +1,18 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(i = 0; i < array.length; i ++){
+    for(j = i + 1; j < array.length; j++){
+      if ((array[i] + array[j]) === target){
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n log n)
 */
 
 /* 
@@ -12,6 +21,7 @@ function hasTargetSum(array, target) {
 
 /*
   Add written explanation of your solution here
+  compare first number to each other number, but then from there, every consequent number will only be compared to the next number
 */
 
 // You can run `node index.js` to view these console logs
